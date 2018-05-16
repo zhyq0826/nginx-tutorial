@@ -113,8 +113,24 @@ client_body_timeout '1m 30s 500ms'
 
 ### include 
 
-include 指令类似 c 语言的 include，把特定的内容插入到 include 的位置，include 
+include 指令类似 c 语言的 include，把特定的内容插入到 include 的位置
+
+## http module 
+
+http module 是 nginx 的核心 module，提供了一些列的功能，比较重要的包括
+
+- server
+- upstream
+- location
 
 
+nginx 的 http module 配置非常多，可以总结一套适合一般性业务的配置原则和指标包括
 
-
+- SSL https
+- url rewrite 对 location url 进行重写
+- request client 请求端设置
+- response  响应端设置
+- upstream server 端设置
+- limit 请求限制
+- auth 认证
+- log
